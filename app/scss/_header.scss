@@ -1,0 +1,97 @@
+.background {
+ min-height: 19rem;
+ background-repeat: no-repeat;
+ background-position: top;
+ background-size: cover;
+ overflow: hidden;
+
+ @include breakpoint-up(large) {
+  min-height: 25rem;
+ }
+}
+
+.header {
+ &.open {
+  display: none;
+ }
+
+ position: relative;
+
+ nav {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  z-index: 2;
+
+  @include breakpoint-up(large) {
+   padding: 0 4rem;
+  }
+ }
+
+ &__toggle {
+  cursor: pointer;
+
+  > span {
+   display: block;
+   height: 3px;
+   width: 17px;
+   background-color: $white;
+   cursor: pointer;
+   transform-origin: 0px 2px;
+   transition: all 200ms ease-in-out;
+
+   &:not(:last-child) {
+    margin-bottom: 3px;
+   }
+  }
+
+  &.open {
+   > span:first-child {
+    transform: rotate(45deg);
+   }
+
+   > span:nth-child(2) {
+    opacity: 0;
+   }
+
+   > span:nth-child(3) {
+    transform: rotate(-45deg);
+   }
+  }
+ }
+
+ &__menu {
+  position: absolute;
+  top: 69px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3rem);
+  background-color: $white;
+  border-radius: 9px;
+
+  a {
+   display: block;
+   text-align: left;
+   padding: 1.6rem 1.3rem;
+   color: $black;
+   font-size: 1rem;
+   font-weight: 500;
+
+   &:not(:last-child) {
+    border-bottom: 0.5px solid hsla(0, 0%, 48%, 0.363);
+   }
+  }
+ }
+
+ &__links {
+  @include breakpoint-up(large) {
+   a {
+    color: $white;
+
+    &:not(:last-child) {
+     padding-right: 2rem;
+    }
+   }
+  }
+ }
+}

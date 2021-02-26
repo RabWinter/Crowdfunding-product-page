@@ -1,0 +1,206 @@
+html {
+ font-size: 100%;
+ box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+ padding: 0;
+ margin: 0;
+ box-sizing: inherit;
+}
+
+h1,
+h2,
+p {
+ padding: 0;
+ margin: 0;
+}
+
+p {
+ color: $darkGray;
+}
+
+a {
+ text-decoration: none;
+}
+
+body {
+ font-family: 'Commissioner', sans-serif;
+ font-size: 1rem;
+ background-color: rgba(238, 238, 238, 0.493);
+ min-height: 100vh;
+ position: relative;
+}
+
+// Flexbox
+.flex-jc-c {
+ display: flex;
+ justify-content: center;
+}
+
+.flex-ai-mar {
+ display: flex;
+ align-items: center;
+ margin-bottom: 1.3rem;
+}
+
+.flex-ai-mar-fs-mod {
+ display: flex;
+ align-items: center;
+ margin: 1.3rem 0;
+ position: relative;
+
+ @include breakpoint-up(large) {
+  position: absolute;
+  top: 0;
+  right: 27px;
+ }
+ > strong {
+  font-size: 1.2rem;
+ }
+
+ > span {
+  padding-left: 0.5rem;
+  color: $darkGray;
+ }
+}
+
+.flex-ai {
+ display: flex;
+ align-items: center;
+ margin-bottom: 1.2rem;
+}
+
+.flex-jc-ai {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+@include breakpoint-up(large) {
+ .flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+ }
+
+ .flex-wrap-modal {
+  display: flex;
+  align-items: center;
+  margin: 1.7rem 0 1.1rem 0;
+ }
+}
+
+// Mobile width & center
+.mob-width {
+ min-width: 87%;
+ left: 50%;
+ transform: translateX(-50%);
+
+ @include breakpoint-up(medium) {
+  min-width: 0;
+  width: 43.75rem;
+ }
+}
+
+.container-mob {
+ padding: 0.8rem 1.5rem;
+
+ @include breakpoint-up(large) {
+  padding: 1rem 2rem;
+ }
+}
+
+.padding-l {
+ padding-left: 1.2rem;
+}
+
+// Border Radius
+.border {
+ border-radius: 8px;
+ border: 1px solid $lightGray;
+}
+
+.border-radius {
+ border-radius: 8px;
+}
+
+// Content Wrap
+.content-wrap {
+ margin: 0 1.2rem 2rem 1.2rem;
+}
+
+.inner-wrap {
+ padding: 1rem 1.2rem;
+}
+
+strong {
+ font-size: 1.8rem;
+}
+
+// Layout
+.text {
+ font-size: 0.9rem;
+}
+
+.text-lh-mb {
+ line-height: 1.6;
+ font-size: 0.9rem;
+ margin-bottom: 1rem;
+ padding: 0 1.2rem;
+}
+
+.text-ai-c {
+ text-align: center;
+
+ @include breakpoint-up(large) {
+  text-align: right;
+ }
+}
+
+.padding-bt {
+ padding-bottom: 0.9rem;
+}
+
+.margin-bt {
+ margin-bottom: 1rem;
+}
+
+.margin-top-sm {
+ margin-top: 0.595rem;
+}
+
+.margin-top-lg {
+ padding-top: 1rem;
+}
+
+// Hide for tablet & Desktop
+@include breakpoint-up(medium) {
+ .hide-tab-dt {
+  display: none;
+ }
+}
+
+// Hide for Desktop
+@include breakpoint-up(large) {
+ .hide-dt {
+  display: none;
+ }
+}
+
+// Hide for Mobile
+@include breakpoint-down(large) {
+ .hide-mobile {
+  display: none;
+ }
+}
+
+// Show for tablet
+@include breakpoint-up(medium) {
+ .show-tablet {
+  display: block;
+ }
+}

@@ -1,0 +1,65 @@
+.overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+}
+
+.btn {
+ border-radius: 50px;
+ border: none;
+ font-weight: 600;
+ background-color: $lightCyan;
+ color: $white;
+ cursor: pointer;
+ transition: all 100ms ease-in-out;
+
+ &:hover {
+  background-color: $darkCyan;
+ }
+}
+
+.btn-lg {
+ font-size: 0.925rem;
+ padding: 0.8rem 2.8125rem;
+}
+
+.btn-sm {
+ font-size: 0.8rem;
+ padding: 0.8rem 1.5rem;
+}
+
+.btn-back {
+ padding: 0 1.5rem;
+ height: 3.5rem;
+ font-size: 0.8rem;
+}
+
+.btn-gray {
+ background-color: rgb(78, 78, 78);
+}
+
+.btn-close {
+ cursor: pointer;
+}
+
+.btn-bookmark {
+ border: 0;
+ font-size: 0.8rem;
+ background-color: transparent;
+ cursor: pointer;
+ margin-left: 1rem;
+
+ @include breakpoint-up(large) {
+  border-radius: 50rem;
+  background-color: rgba(238, 238, 238, 0.493);
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  transition: all 100ms ease-in-out;
+ }
+}
