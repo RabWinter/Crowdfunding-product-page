@@ -71,20 +71,17 @@
         <button class="btn btn-back" id="btnBack">Back this project</button>
         <div class="project__icon-bookmark">
          <button class="btn-bookmark">
-          <div class="project__icon--bookmark">
-           <svg
-            class="svg-checked"
-            width="56"
-            height="56"
-            xmlns="http://www.w3.org/2000/svg"
-           >
-            <g fill="none" fill-rule="evenodd">
-             <circle id="circle" fill="#2F2F2F" cx="28" cy="28" r="28" />
-             <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
-            </g>
-           </svg>
-          </div>
-
+          <svg
+           class="svg-checked"
+           width="56"
+           height="56"
+           xmlns="http://www.w3.org/2000/svg"
+          >
+           <g fill="none" fill-rule="evenodd">
+            <circle id="circle" fill="#2F2F2F" cx="28" cy="28" r="28" />
+            <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+           </g>
+          </svg>
           <p class="project__bookmark--text hide-mobile">Bookmark</p>
          </button>
         </div>
@@ -224,14 +221,16 @@
 
      <!-- 1 -->
      <div class="product border">
-      <input
-       type="radio"
-       name="radio"
-       value="no-reward"
-       id="radioBtn-1"
-       class="radio__input inner-wrap"
-       aria-label="No-reward"
-      />
+      <label for="radio">
+       <input
+        type="radio"
+        name="radio"
+        value="no-reward"
+        id="radioBtn-1"
+        class="radio__input inner-wrap"
+        aria-label="No-reward"
+       />
+      </label>
       <div class="radio__circle"></div>
       <p class="title title-no-reward padding-bt">Pledge with no reward</p>
       <p class="text margin-bt">
@@ -273,22 +272,16 @@
 
       <div class="pledge">
        <p class="pledge__enter">Enter your pledge</p>
-       <form
-        class="price__input flex-jc-c text-ai-c"
-        id="item-bamboo"
-        href="#item-2"
-       >
-        <label for="pledge">
-         <input
-          type="number"
-          name="pledge-value"
-          id="pledge-value-1"
-          class="price__selected--input"
-          min="25"
-          max=""
-          value="25"
-         />
-        </label>
+       <form class="price__input flex-jc-c text-ai-c" id="item-bamboo">
+        <input
+         type="number"
+         name="pledge-value"
+         id="pledge-value-1"
+         class="price__selected--input"
+         min="25"
+         max="1000"
+         value="25"
+        />
         <button type="submit" class="btn btn-sm btn-continue">Continue</button>
        </form>
       </div>
@@ -325,19 +318,15 @@
 
       <div class="pledge">
        <p class="pledge__enter">Enter your pledge</p>
-       <form
-        class="price__input flex-jc-c text-ai-c"
-        id="item-black"
-        href="#item-3"
-       >
-        <label for="pledge">
+       <form class="price__input flex-jc-c text-ai-c" id="item-black">
+        <label for="pledge-value-2">
          <input
           type="number"
           name="pledge-value"
           id="pledge-value-2"
           class="price__selected--input"
           min="75"
-          max=""
+          max="1000"
           value="75"
          />
         </label>
