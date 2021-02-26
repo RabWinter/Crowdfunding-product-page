@@ -178,6 +178,11 @@
   font-size: 1.2rem;
   padding-top: 1.875rem;
   padding-bottom: 1.275rem;
+  
+  @include breakpoint-up(large) {
+   padding-top: 2.875rem;
+   padding-bottom: 2.275rem;
+  }
  }
 
  &__text {
